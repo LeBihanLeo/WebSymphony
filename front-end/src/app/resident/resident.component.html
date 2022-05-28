@@ -1,0 +1,31 @@
+<br>
+<div class="container h-75">
+    <div class="row">
+
+        <div class="col">
+            <div class="container d-flex">
+                <img src="{{resident.picture}}" alt="">
+                <div class="container d-flex flex-column justify-content-around">
+                    <h2 class="text-primary">{{resident.nom}} {{resident.prenom}}</h2>
+                    <div class="btn-trim">
+                        <button class="btn btn-success" routerLink="/quizzes/{{resident.id}}">
+                            <i class="bi bi-play-fill"></i>
+                            Lancer un quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="col d-flex flex-column">
+          <app-resident-handicap
+            [handicap]="resident.handicap">
+          </app-resident-handicap>
+          <button class="btn btn-primary my-2" routerLink="/resident/{{resident.id}}/modification">Modifier</button>
+        </div>
+  </div>
+  <br>
+  <app-resident-graph-stats-component [residentId]="resident.id"></app-resident-graph-stats-component>
+  <app-heatmap *ngIf="resident.handicap == 'Tremblement d\'attitude'"></app-heatmap>
+</div>

@@ -1,0 +1,21 @@
+  <div class="container">
+<div class="col">
+  <br>
+  <br>
+  <div  class="d-flex justify-content-center">
+    <div class="fs-2 mb-3"><i class="bi bi-trophy-fill"></i> Résultats</div>
+  </div>
+  <br>
+  <br>
+
+  <h3 *ngIf="resident">
+    Bravo {{resident.prenom}},
+  </h3>
+
+  <h4 *ngIf="quiz">
+    Vous avez terminé le quiz "{{quiz.name}}"!
+  </h4>
+
+</div>
+
+</div>

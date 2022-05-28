@@ -1,0 +1,113 @@
+.zoomText {
+    font-size: 1.6vw;
+    width: 85vw;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.handicap{
+  height: 14vh;
+  width: 40vw;
+  border: 1px solid #6c757d;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.answerContainer {
+  height: 14vh;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+#quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4vh;
+}
+
+.hide {
+    background-color: white!important;
+    color: black!important;
+}
+
+.false {
+    background-color: red;
+    color: white;
+}
+
+.true {
+    background-color: green;
+    color: white;
+}
+
+.selected {
+    border: 2.5px dashed #cdbf03;
+    animation: spin 1s alternate infinite;
+    background-color: #ecec4a!important;
+    color: black;
+}
+
+.missClickRange {
+  height: fit-content;
+  width: fit-content;
+  margin: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.missClickMode {
+  margin: 0vw;
+  padding: 2.5vw;
+}
+
+.missClickModeVisible {
+    background-color: yellowgreen;
+}
+.loadAnswer{
+  z-index: 1;
+  height: 13.8vh;
+  width: 0vw;
+  position: absolute;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.loadAnimation{
+  animation-name: fill;
+  animation-duration: 4s;
+  background-color: #bdbd22;
+}
+
+endLoadAnimation{
+  animation: 0;
+}
+
+.textHandicap{
+  z-index: 2;
+}
+
+@keyframes fill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 39.8vw;
+  }
+}
+
+.nextQuestion-container{
+  display: flex;
+  justify-content: center;
+}
+
+
+

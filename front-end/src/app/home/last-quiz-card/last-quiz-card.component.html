@@ -1,0 +1,25 @@
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4 d-flex align-items-center">
+      <img src="assets/images/empty.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Dernier quiz effectué</h5>
+
+        <div class="card-text">
+            <div *ngIf="resident; else elseBlock1"><b>Nom : </b> {{resident.nom}}</div>
+            <ng-template #elseBlock1><div><b>Nom : </b> Aucun</div></ng-template>
+
+          <div *ngIf="resident; else elseBlock2"><b>Prénom : </b> {{resident.prenom}}</div>
+          <ng-template #elseBlock2><div><b>Prénom : </b> Aucun</div></ng-template>
+          <br>
+          <div *ngIf="quiz; else elseBlock3"><b>Quiz :  </b> {{quiz.name}}</div>
+          <ng-template #elseBlock3><div><b>Quiz : </b> Aucun</div></ng-template>
+        </div>
+
+        <p class="card-text text-end"><small class="text-muted">{{getDate()}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>

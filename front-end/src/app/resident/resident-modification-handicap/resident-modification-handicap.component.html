@@ -1,0 +1,44 @@
+<div class="card">
+  <h3 class="text-center">Handicaps</h3>
+  <div class="container">
+    <h5>Moteur</h5>
+
+      <div class="form-check">
+        <input (click)="updateHandicap('Tremblement d\'attitude')"
+               class="form-check-input"
+               type="radio"
+               name="handicap"
+               [checked]="isHandicap('Tremblement d\'attitude')">
+        Tremblement d'attitude
+      </div>
+
+      <div class="form-check">
+        <input (click)="updateHandicap('Tremblement intentionnel')"
+               class="form-check-input"
+               type="radio"
+               name="handicap"
+               [checked]="isHandicap('Tremblement intentionnel')">
+        Tremblement intentionnel
+      </div>
+
+      <div class="form-check">
+        <input (click)="updateHandicap('Tremblement essenciel')"
+               class="form-check-input"
+               type="radio"
+               name="handicap"
+               [checked]="isHandicap('Tremblement essenciel')">
+        Tremblement essenciel
+      </div>
+
+      <div class="form-check">
+        <input (click)="updateHandicap('Aucun')"
+               class="form-check-input"
+               type="radio"
+               name="handicap"
+               [checked]="isHandicap('Aucun')">
+        Aucun
+      </div>
+      <br>
+
+    </div>
+  </div>
